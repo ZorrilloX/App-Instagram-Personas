@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment"
+    app:startDestination="@id/listaPersonasFragment">
+
+    <fragment
+        android:id="@+id/listaPersonasFragment"
+        android:name="com.example.instagram_v3.ui.fragments.ListaPersonasFragment"
+        android:label="ListaPersonasFragment" >
+        <action
+            android:id="@+id/action_listaPersonasFragment_to_misLikesFragment"
+            app:destination="@id/misLikesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/misLikesFragment"
+        android:name="com.example.instagram_v3.ui.fragments.MisLikesFragment"
+        android:label="MisLikesFragment" >
+        <action
+            android:id="@+id/action_misLikesFragment_to_listaPersonasFragment"
+            app:destination="@id/listaPersonasFragment" />
+    </fragment>
+</navigation>
