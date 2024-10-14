@@ -160,10 +160,13 @@ class PersonasViewModel : ViewModel() {
 
         updatedList.remove(currentPersona)
 
-        _listaPersonas.value = updatedList
+        if(updatedList.isEmpty()){
+            _personaActual.value = Persona(nombre = "LISTA VACIA", fotos = listOf("nourl"))
+        }else{
+            _listaPersonas.value = updatedList
+        }
 
         if (updatedList.isEmpty()) {
-            _personaActual.value = null
         } else {
             _personaActual.value = updatedList.firstOrNull()
         }

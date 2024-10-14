@@ -60,7 +60,6 @@ class ListaPersonasFragment : Fragment() {
             viewModel.dislikeActual()
         }
 
-
         viewModel.personaActual.observe(viewLifecycleOwner) { persona ->  // Observando el cambio de persona actual
             fotosAdapter.updateFotos(persona.fotos, persona.nombre)
             setupIndicator(persona.fotos.size)
